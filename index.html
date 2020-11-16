@@ -4,53 +4,102 @@
     <meta charset="UTF-8">
     <title>CS171 Final Project</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
+    <div class="row">
+    <div class="col">
+
         <div class="row">
+            <div class="col">
+                <h1> Food for thought</h1>
+                <h> Girls Save the Planet (Vic and Karina)</h>
+            </div>
+        </div>
+
+        <div class="row Quiz-Site">
             <div class="col">
                <b> Hello, this will be the implementation site for our quiz</b>
             </div>
         </div>
+
         <div class="row Visualization-One-Site">
             <div class="col">
+
                 <div class="row">
                     <div class="col">
                         <b> Here are the controls for Visualization one</b>
                         <select name="V1year" id="V1year">
                             <option> Years </option>
                         </select>
-                        <select name="V1country" id="V1country">
+                        <select name="V1projection" id="V1projection">
                             <option> Country </option>
                         </select>
                     </div>
                 </div>
+
                 <div class="row" >
-                    <div class="col" id="MapSite">
-                        <b> this is where our map implementation will go</b>
+                    <div class="col">
+                        <div>
+                            <b> this is where our map implementation will go. It should look like the following sketch</b>
+                        </div>
+                        <div>
+                            <img src="img/vis1sketch.jpg">
+                        </div>
+                    </div>
+                    <div id="MapSite">
                     </div>
                 </div>
+
             </div>
         </div>
+
         <div class="row Visualization-Two-Site">
             <div class="col">
+
                 <div class="row">
                     <div class="col">
-                       <b> This is the area for our second visualization main line chart</b>
+                       <div>
+                           <b> This is the area for our second visualization main line chart it should look like the following sketch</b>
+                       </div>
+                        <div>
+                            <img src="img/vis2sketch.jpg">
+                        </div>
                     </div>
                 </div>
+
                 <div class="row" >
-                    <div class="col">
-                        <b> This is where the linked line graph will go</b>
+                    <div class="col" id="linechartinyourare">
+                        <b> This graph will be linked and control the above visualization</b>
                     </div>
                 </div>
+
             </div>
         </div>
+
+        <div class="row Visualization-Three-Site">
+            <div class="col">
+                <b> Our Third Visualization will be a bar chart</b>
+            </div>
+        </div>
+
+        <div class="row Visualization-Four-Site">
+            <div class="col">
+                <div>
+                    <b> Our Fourth Visualization will be a bubble chart which should look like the sketch below</b>
+                </div>
+                <img src="img/vis4sketch.jpeg">
+            </div>
+        </div>
+
+    </div>
+    </div>
     </div>
 
     <!-- embedding JS libraries (BootStrap)-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></body>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
@@ -60,11 +109,15 @@
     <script src="https://d3js.org/topojson.v2.min.js"></script>
     <script src="https://d3js.org/d3-geo.v1.min.js"></script>
 
+    <!-- Leaflet -->
+    <script src="js/leaflet.js"></script>
+
     <!-- Your implementation -->
     <script src="js/barchart.js"></script>
     <script src="js/bubblemap.js"></script>
     <script src="js/worldmap.js"></script>
-    <script src="js/linegraph.js.js"></script>
+    <script src="js/lineanimation.js"></script>
+    <script src="js/linechart.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

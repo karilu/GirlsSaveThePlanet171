@@ -11,9 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0bda881-2647-4d04-a75b-6deebb6b5ac7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/lineanimation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/linechart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FinalProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FinalProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/cropYieldPredictions.xls" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/linegraph.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/worldmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/worldmap.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +48,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lab7" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -54,6 +60,12 @@
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Karina\WebstormProjects\FinalProject\data" />
+      <recent name="C:\Users\Karina\WebstormProjects\FinalProject\img" />
+      <recent name="C:\Users\Karina\WebstormProjects\FinalProject\js" />
+      <recent name="C:\Users\Karina\WebstormProjects\FinalProject\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Karina\WebstormProjects\FinalProject\js" />
     </key>
@@ -67,7 +79,8 @@
       <option name="presentableId" value="Default" />
       <updated>1605224015391</updated>
       <workItem from="1605224017163" duration="5519000" />
-      <workItem from="1605490164233" duration="914000" />
+      <workItem from="1605490164233" duration="6083000" />
+      <workItem from="1605497802093" duration="3024000" />
     </task>
     <servers />
   </component>
@@ -87,10 +100,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="973" y="188" key="FileChooserDialogImpl" timestamp="1605247154251">
+    <state x="973" y="188" key="FileChooserDialogImpl" timestamp="1605500597324">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="973" y="188" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1605247154251" />
+    <state x="973" y="188" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1605500597324" />
     <state x="301" y="75" key="SettingsEditor" timestamp="1605224349075">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
