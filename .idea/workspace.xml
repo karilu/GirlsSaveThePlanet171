@@ -11,13 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0bda881-2647-4d04-a75b-6deebb6b5ac7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/barchart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/bubblemap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/linegraph.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/worldmap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lineanimation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +42,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HW7" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -57,6 +53,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Karina\WebstormProjects\FinalProject\js" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,7 +66,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605224015391</updated>
-      <workItem from="1605224017163" duration="5467000" />
+      <workItem from="1605224017163" duration="5519000" />
+      <workItem from="1605490164233" duration="914000" />
     </task>
     <servers />
   </component>
@@ -82,6 +84,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="973" y="188" key="FileChooserDialogImpl" timestamp="1605247154251">
