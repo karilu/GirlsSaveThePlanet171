@@ -1,6 +1,7 @@
 let lineChart;
 let map;
 let worldData;
+let investmentData;
 
 let promises = [
     d3.json("data/world.geo.json"),
@@ -12,6 +13,11 @@ let promises = [
 Promise.all(promises)
     .then( function(data){ main(data) })
     .catch( function (err){console.log(err)} );
+
+d3.csv("data/renewableInvestment.csv"). then(d=>{
+    investmentData = d
+    console.log(investmentData)
+})
 
 function main(data){
     console.log(data)
