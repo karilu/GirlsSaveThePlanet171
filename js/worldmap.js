@@ -11,6 +11,9 @@ class WorldMap {
     initvis(){
         let vis = this
 
+        console.log("map")
+        console.log(this.geo)
+
         L.Icon.Default.imagePath = 'img/images/';
 
         vis.map = L.map(vis.parentElement).setView([30,0], 2);
@@ -19,7 +22,7 @@ class WorldMap {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(vis.map);
 
-        L.geoJson(vis.geo).addTo(vis.map);
+      // L.geoJson(vis.geo).addTo(vis.map);
 
         vis.wrangledata()
     }

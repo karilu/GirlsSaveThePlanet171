@@ -2,20 +2,21 @@ let lineChart;
 let map;
 let worldData;
 
-d3.json("data/world.geo.json").then(data=>{
-    worldData = data;
+let promises = [
+    d3.json("data/world.geo.json"),
+    d3.csv("data/fossilfuelEmissions.csv"),
+    d3.csv("data/crops.csv")
+
+];
+
+Promise.all(promises)
+    .then( function(data){ main(data) })
+    .catch( function (err){console.log(err)} );
+
+function main(data){
     console.log(data)
-})
+    lineChart = new LineChart("linechartinyourare",data[1])
+    map = new WorldMap("MapSite",data[0],data[2])
+}
 
-console.log(worldData)
-
-d3.csv("data/fossilfuelEmissions.csv").then(data=>{
-    console.log(data);
-    lineChart = new LineChart("linechartinyourare",data)
-});
-
-d3.csv("data/crops.csv").then(data=>{
-    console.log(data);
-    map = new WorldMap("MapSite",worldData,data)
-});
 
