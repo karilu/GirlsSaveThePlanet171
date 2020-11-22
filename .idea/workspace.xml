@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0bda881-2647-4d04-a75b-6deebb6b5ac7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/survey.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -41,7 +42,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lab8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab9" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -74,7 +75,7 @@
       <workItem from="1605224017163" duration="5519000" />
       <workItem from="1605490164233" duration="6083000" />
       <workItem from="1605497802093" duration="3312000" />
-      <workItem from="1606007017944" duration="7624000" />
+      <workItem from="1606007017944" duration="17302000" />
     </task>
     <servers />
   </component>
@@ -94,13 +95,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="973" y="188" key="FileChooserDialogImpl" timestamp="1606022926741">
+    <state x="973" y="188" key="FileChooserDialogImpl" timestamp="1606076721802">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="973" y="188" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1606022926741" />
+    <state x="973" y="188" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1606076721802" />
     <state x="301" y="75" key="SettingsEditor" timestamp="1605224349075">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="75" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1605224349075" />
+    <state x="856" y="199" key="run.anything.popup" timestamp="1606079492294">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="856" y="199" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1606079492294" />
   </component>
 </project>
