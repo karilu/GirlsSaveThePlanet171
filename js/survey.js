@@ -3,18 +3,16 @@ let answerOne,
     answerTwo,
     answerThree;
 
-let answer = answerOne + answerThree + answerTwo;
-
 function pickedWheat(){
-    answerOne = ['WH', 'wheat']
+    answerOne = ['WH', 'wheat', '0']
     ontoQuestionTwo()
 }
 function pickedRice(){
-    answerOne = ['RI','rice']
+    answerOne = ['RI','rice', '1']
     ontoQuestionTwo()
 }
 function pickedMaize(){
-    answerOne = ['MZ', 'maize']
+    answerOne = ['MZ', 'maize', '2']
     ontoQuestionTwo()
 }
 
@@ -103,8 +101,20 @@ function startOver(){
         '                            Rice <br>\n' +
         '                            <input type="image" src="img/rice.png" alt="Submit" width="150" height="150" onclick="pickedRice()">\n' +
         '                        </div>')
+
+    $('#surveyResults').html('<b> You did not complete the survey so please read the filter descriptions in order to\n' +
+        '                                        create different maps to explore. Click on the countries for more information. </b>')
 }
 
 function surveyCompleted(){
+    let answer = answerOne[0] + answerThree + answerTwo;
+    $('#surveyResults').html("Your survey results indicate that you would be most interested in the " + '<b><i>' + answer +
+        '</i></b> projection. Which is the change in the <b><i>' + answerOne[1] + "</i></b> crop for <b><i> " + answerTwo + ' </i></b> following the SRES <b><i>' + answerThree
+        + '</i></b> scenario. Change the filters to explore different maps and click on individual countries for more information.');
+    $('#V1year').val(answerTwo);
+    $('#V1projection').val(answerThree);
+    $('#V1crop').val(answerOne[2]);
+    map.surveyInitialization();
     fullpage_api.moveSectionDown();
+
 }

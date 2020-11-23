@@ -16,7 +16,7 @@
                         <div class="col">
                             <h1> Food for thought</h1>
                            <h5>A visualization project on the intersection of food and climate change.</h5>
-                            <h> Girls Save the Planet (Vic and Karina)</h>
+                             Girls Save the Planet (Vic and Karina)
                         </div>
                     </div>
                 </div>
@@ -42,12 +42,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <b> Hello, this will be the implementation site for our quiz</b>
+                            <h1> Introductory Survey</h1> <i>click on the images to answer each question.</i> <br><br>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col" id="surveyQuestion">
-                            <b> Which of the following crops would you say plays the biggest role in your diet?</b>
+                        <div class="col">
+                            <h3 id="surveyQuestion"> Which of the following crops would you say plays the biggest role in your diet?</h3><br><br>
                         </div>
                     </div>
                     <div class="row" id="surveyOptions">
@@ -66,7 +66,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button onclick="startOver()"> Reset Survey</button>
+                            <br><br><br><button class="float-right" onclick="startOver()"> Reset Survey</button>
                         </div>
                     </div>
                 </div>
@@ -79,9 +79,14 @@
 
                             <div class="row" >
                                 <div class="col">
-                                    <h1> Figure 1. </h1>
+                                    <h1> Figure 1. World Map </h1>
+                                    <h5> The following visualization is based on a 2010 data set developed by
+                                        Ana Iglesias of The Universidad Politecnica de Madrid and Cynthia Rosenzweig
+                                        of the NASA Goddard Institute for Space Studies. They created projections for
+                                        changes in yield for world staple crops from the 2000 standard for different scenarios described in
+                                        the Special Report on Emissions Scenarios (SRES)</h5>
                                 </div>
-                            </div>
+                            </div> <br>
 
                             <div class="row">
 
@@ -90,26 +95,29 @@
                                 </div>
 
                                 <div class="col">
-                                    <b> Here are the controls for Visualization one</b>
-                                    <select name="V1year" id="V1year">
-                                        <option> 2050 </option>
-                                        <option> 2080 </option>
+                                    <p id="surveyResults"> <b> You did not complete the survey so please read the filter descriptions in order to
+                                        create different maps to explore. Click on the countries for more information. </b></p>
+                                    <br>
+                                    <h4> Control The Map </h4><br>
+                                    <label for="V1year"><b>Year:</b></label><select name="V1year" id="V1year" onchange="map.updatevis()">
+                                        <option value="2050"> 2050 </option>
+                                        <option value="2080"> 2080 </option>
+                                    </select> <br>
+                                    <label for="V1projection"><b> Global Projection: </b></label><select name="V1projection" id="V1projection"
+                                                                                                         onchange="map.updatevis()">
+                                        <option value="A1F1"> SRES A1F1 </option>
+                                        <option value="A2a"> SRES A2a </option>
+                                        <option value="A2b"> SRES A2b </option>
+                                        <option value="A2c"> SRES A2c </option>
+                                        <option value="B1a"> SRES B1a </option>
+                                        <option value="B2a"> SRES B2a </option>
+                                        <option value="B2b"> SRES B2b </option>
+                                    </select> <br>
+                                    <label for="V1crop"><b> Crop: </b></label><select name="V1crop" id="V1crop" onchange="map.updatevis()">
+                                        <option value="0"> Wheat </option>
+                                        <option value="1"> Rice </option>
+                                        <option value="2"> Maize </option>
                                     </select>
-                                    <select name="V1projection" id="V1projection">
-                                        <option> SRES A1F1 </option>
-                                        <option> SRES A2a </option>
-                                        <option> SRES A2b </option>
-                                        <option> SRES A2c </option>
-                                        <option> SRES B1a </option>
-                                        <option> SRES B2a </option>
-                                        <option> SRES B2b </option>
-                                    </select>
-                                    <select name="V1crop" id="V1crop">
-                                        <option value="WH"> Wheat </option>
-                                        <option> Rice </option>
-                                        <option> Maize </option>
-                                    </select>
-                                    <button> Update Map</button>
                                 </div>
                             </div>
 
@@ -122,7 +130,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h1> Information</h1>
+                            <h1> An Uncertain Future</h1>
+                            <p> As shown in figure 1, there are many ways our future can change.</p>s
                         </div>
                     </div>
                 </div>
