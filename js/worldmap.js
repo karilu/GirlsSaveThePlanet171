@@ -29,6 +29,36 @@ class WorldMap {
 
         vis.LayerGroup.addLayer(vis.geoLayer);
 
+        vis.color = function getColor(d) {
+            return d > 10 ? '#c51b7d' :
+                d > 5  ? '#e9a3c9' :
+                    d > 0   ? '#fde0ef' :
+                        d > -5  ? '#e6f5d0' :
+                            d > -10   ? '#a1d76a' :
+                                d > -15   ? '#4d9221' :
+                                    '#777572';
+        };
+
+        vis.legend = L.control(({position: 'bottomright'}));
+
+        vis.legend.onAdd = function (map) {
+
+            let div = L.DomUtil.create('div', 'info legend'),
+                grades = [-15, -10, -5, 0, 5, 10],
+                labels = [];
+
+            // loop through our density intervals and generate a label with a colored square for each interval
+            for (let i = 0; i < grades.length; i++) {
+                div.innerHTML +=
+                    '<i style="background:' + vis.color(grades[i] + 1) + '"></i> ' +
+                    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+            }
+
+            return div;
+        };
+
+        vis.legend.addTo(vis.map);
+
         vis.wrangledata()
     }
 
@@ -72,19 +102,9 @@ class WorldMap {
 
         vis.LayerGroup.removeLayer(vis.geoLayer)
 
-        function getColor(d) {
-            return d > 10 ? '#c51b7d' :
-                d > 5  ? '#e9a3c9' :
-                    d > 0   ? '#fde0ef' :
-                        d > -5  ? '#e6f5d0' :
-                            d > -10   ? '#a1d76a' :
-                                d > -15   ? '#4d9221' :
-                                    '#777572';
-        };
-
         function style(feature) {
             return {
-                fillColor: getColor(findValue(feature)),
+                fillColor: vis.color(findValue(feature)),
                 weight: 2,
                 opacity: 1,
                 color: 'white',

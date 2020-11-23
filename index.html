@@ -97,7 +97,7 @@
                                 <div class="col">
                                     <p id="surveyResults"> <b> You did not complete the survey so please read the filter descriptions in order to
                                         create different maps to explore. Click on the countries for more information. </b></p>
-                                    <br>
+                                    <i>The dark gray color indicates information is not available</i><br><br>
                                     <h4> Control The Map </h4><br>
                                     <label for="V1year"><b>Year:</b></label><select name="V1year" id="V1year" onchange="map.updatevis()">
                                         <option value="2050"> 2050 </option>
@@ -131,7 +131,12 @@
                     <div class="row">
                         <div class="col">
                             <h1> An Uncertain Future</h1>
-                            <p> As shown in figure 1, there are many ways our future can change.</p>s
+                            <p> As shown in figure 1, there are many ways our future can change and not every country
+                            will be affected in the same way. Naturally, not every country's actions are contributing
+                            equally to these hypothetical futures either. The previous projections were created by estimating
+                            future atmospheric carbon levels, frequency of precipitation, and average temperature. A
+                            deciding factor in which of these scenarios comes to be is the quantity of fossil fuel emissions,
+                                which you will be able to explore in the next slide.</p>
                         </div>
                     </div>
                 </div>
@@ -142,13 +147,17 @@
                     <div class="row">
                         <div class="col">
 
+                            <div class="row" >
+                                <div class="col">
+                                    <h1> Figure 2. Fossil Fuel Emissions </h1>
+                                    <h5> Visualization Explanation</h5>
+                                </div>
+                            </div> <br>
+
                             <div class="row">
                                 <div class="col">
                                     <div>
-                                        <b> This is the area for our second visualization main line chart it should look like the following sketch</b>
-                                    </div>
-                                    <div>
-                                        <img src="img/vis2sketch.jpg">
+                                        <b> This is the area for our second visualization main line chart </b>
                                     </div>
                                 </div>
                             </div>
@@ -176,11 +185,19 @@
 
             <div class="section" id="VisThree">
                 <div class="container">
-                    <div class="row">
+
+                    <div class="row" >
                         <div class="col">
-                            <b> Our Third Visualization will be a bar chart</b>
+                            <h1> Figure 3. Stacked Area Chart Illustrating Investment in Clean Energy </h1>
+                            <h5> Visualization Explanation</h5>
+                        </div>
+                    </div> <br>
+
+                    <div class="row">
+                        <div class="col" id="stackedAreaChart">
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -252,7 +269,7 @@
     <script type="text/javascript" src="js/fullpage.js"></script>
 
     <!-- Our implementation -->
-    <script src="js/barchart.js"></script>
+    <script src="js/stackedareachart.js"></script>
     <script src="js/bubblemap.js"></script>
     <script src="js/worldmap.js"></script>
     <script src="js/lineanimation.js"></script>

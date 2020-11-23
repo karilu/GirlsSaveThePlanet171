@@ -1,16 +1,16 @@
 
-class StackedAreaChart{
-    constructor(parentElement,data){
+class StackedAreaChart {
+    constructor(parentElement, data) {
         this.parentElement = parentElement
         this.data = data
         this.displayData = [];
 
-        let colors = ['#AA4839', '#AA7239', '#265B6A', '#2A7E43', '#582B73', '#882D63','#7EA136', '#ACAB39']
+        let colors = ['#AA4839', '#AA7239', '#265B6A', '#2A7E43', '#582B73', '#882D63', '#7EA136', '#ACAB39']
 
-        this.dataCategories = Object.keys(this.data[0]).filter(d=>d !== "Year")
+        this.dataCategories = Object.keys(this.data[0]).filter(d => d !== "Year")
 
-        let colorArray = this.dataCategories.map( (d,i) => {
-            return colors[i%10]
+        let colorArray = this.dataCategories.map((d, i) => {
+            return colors[i % 10]
         })
 
         this.colorScale = d3.scaleOrdinal()
@@ -20,13 +20,13 @@ class StackedAreaChart{
         this.initvis()
     }
 
-    initvis(){
+    initvis() {
         let vis = this
 
         vis.margin = {top: 40, right: 40, bottom: 60, left: 60};
         //the dynamic sizing wasn't working so I hard coded it in the meantime
-        vis.width = $('#' + vis.parentElement).width() - vis.margin.left - vis.margin.right;
-        vis.height = $('#' + vis.parentElement).height() - vis.margin.top - vis.margin.bottom;
+        vis.width = 600 - vis.margin.left - vis.margin.right;
+        vis.height = 500 - vis.margin.top - vis.margin.bottom;
 
         // svg drawing area
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
@@ -45,7 +45,7 @@ class StackedAreaChart{
         // Scales and axes
         vis.x = d3.scaleTime()
             .range([0, vis.width])
-            .domain(d3.extent(vis.data, d=> d.Year));
+            .domain(d3.extent(vis.data, d => d.Year));
 
         vis.y = d3.scaleLinear()
             .range([vis.height, 0]);
@@ -70,9 +70,15 @@ class StackedAreaChart{
         //stacked area layout
         vis.area = d3.area()
             .curve(d3.curveCardinal)
-            .x(function(d)  { return vis.x(d.data.Year); })
-            .y0(function(d) { return vis.y(d[0]); })
-            .y1(function(d) { return vis.y(d[1]); });
+            .x(function (d) {
+                return vis.x(d.data.Year);
+            })
+            .y0(function (d) {
+                return vis.y(d[0]);
+            })
+            .y1(function (d) {
+                return vis.y(d[1]);
+            });
 
         //add tooltip holder
         vis.tooltip = vis.svg.append("text")
@@ -84,10 +90,10 @@ class StackedAreaChart{
         vis.wrangleData();
     }
 
-    wrangleData(){
+    wrangleData() {
         let vis = this;
 
-        if(vis.focus) {
+        if (vis.focus) {
 
             console.log("Applying filter " + vis.filter + " at " + vis.filter);
             vis.displayData = [vis.stackedData[vis.selectedIndex]];
@@ -99,16 +105,15 @@ class StackedAreaChart{
         vis.updateVis();
     }
 
-    updateVis(){
+    updateVis() {
         let vis = this;
 
         // Update domain
-        vis.y.domain([0, d3.max(vis.displayData, function(d) {
-            return d3.max(d, function(e) {
-                if(vis.focus) {
-                    return e[1]-e[0];
-                }
-                else {
+        vis.y.domain([0, d3.max(vis.displayData, function (d) {
+            return d3.max(d, function (e) {
+                if (vis.focus) {
+                    return e[1] - e[0];
+                } else {
                     return e[1];
                 }
             });
@@ -125,14 +130,14 @@ class StackedAreaChart{
             .style("fill", d => {
                 return vis.colorScale(d)
             })
-            .attr("d", d =>  {
-                if (vis.focus){
+            .attr("d", d => {
+                if (vis.focus) {
                     return vis.basicArea(d)
                 } else {
                     return vis.area(d)
                 }
             })
-            .on("click", function(event, d) {
+            .on("click", function (event, d) {
 
                 // set filter
                 vis.filter = vis.dataCategories[d.index]
@@ -143,13 +148,13 @@ class StackedAreaChart{
                 // lastly, call wangleData
                 vis.wrangleData();
             })
-            .on("mouseover", function(event, d){
+            .on("mouseover", function (event, d) {
                 // always
                 vis.selectedIndex = d.index
                 // update tooltip text
                 vis.tooltip.text(vis.dataCategories[d.index]);
             })
-            .on("mouseout", function(d) {
+            .on("mouseout", function (d) {
                 // empty tooltip
                 vis.tooltip.text("");
             });

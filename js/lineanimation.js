@@ -3,7 +3,9 @@
 
 class LineAnimation {
 
-    constructor() {
+    constructor(parentElement,data) {
+        this.parentElement = parentElement;
+
     }
 
     initvis(){
