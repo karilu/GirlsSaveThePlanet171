@@ -11,10 +11,10 @@ class LineChart {
     initvis(){
         let vis = this
 
-        vis.margin = {top: 40, right: 40, bottom: 60, left: 130};
+        vis.margin = {top: 40, right: 40, bottom: 60, left: 40};
         //the dynamic sizing wasn't working so I hard coded it in the meantime
         vis.width = $('#' + vis.parentElement).width() - vis.margin.left - vis.margin.right;
-        vis.height = 300 - vis.margin.top - vis.margin.bottom;
+        vis.height = 250 - vis.margin.top - vis.margin.bottom;
 
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr("width", vis.width + vis.margin.left + vis.margin.right)
@@ -38,7 +38,7 @@ class LineChart {
         vis.xAxisGroup = vis.svg.append("g")
             .attr("class", "x-axis axis").attr("transform", "translate(0," + vis.height + ")");
 
-        this.wrangledata()
+        vis.wrangledata()
     }
 
     wrangledata(){

@@ -3,6 +3,7 @@ let map;
 let stackedAreaChart;
 let worldData;
 let investmentData;
+let scatterAnimation
 
 let promises = [
     d3.json("data/world.geo.json"),
@@ -17,9 +18,10 @@ Promise.all(promises)
 
 function main(data){
     console.log(data)
-    lineChart = new LineChart("linechartinyourare",data[1])
+    lineChart = new LineChart("linechartinyourarea",data[1])
     map = new WorldMap("MapSite",data[0],data[2])
     stackedAreaChart = new StackedAreaChart('stackedAreaChart', data[3])
+    scatterAnimation = new LineAnimation('lineAnimation', data[1])
 }
 
 

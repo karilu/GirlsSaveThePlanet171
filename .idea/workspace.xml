@@ -11,13 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0bda881-2647-4d04-a75b-6deebb6b5ac7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/stackedareachart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/barchart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/barchart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/lineanimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/lineanimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/linechart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/linechart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/worldmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/worldmap.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lab6" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -79,7 +78,7 @@
       <workItem from="1605224017163" duration="5519000" />
       <workItem from="1605490164233" duration="6083000" />
       <workItem from="1605497802093" duration="3312000" />
-      <workItem from="1606007017944" duration="32183000" />
+      <workItem from="1606007017944" duration="41789000" />
     </task>
     <servers />
   </component>
@@ -99,10 +98,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="973" y="188" key="FileChooserDialogImpl" timestamp="1606105171757">
+    <state x="973" y="188" key="FileChooserDialogImpl" timestamp="1606120645947">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="973" y="188" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1606105171757" />
+    <state x="973" y="188" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1606120645947" />
     <state x="301" y="75" key="SettingsEditor" timestamp="1605224349075">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -111,6 +110,18 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="0" y="198" width="770" height="597" key="dock-window-1/0.0.1600.860@0.0.1600.860" timestamp="1606101699221" />
+    <state x="49" y="0" width="770" height="846" key="dock-window-2" timestamp="1606115967067">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="49" y="0" width="770" height="846" key="dock-window-2/0.0.1600.860@0.0.1600.860" timestamp="1606115967067" />
+    <state x="-7" y="0" width="814" height="867" key="dock-window-3" timestamp="1606118113660">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="-7" y="0" width="814" height="867" key="dock-window-3/0.0.1600.860@0.0.1600.860" timestamp="1606118113660" />
+    <state x="-7" y="0" width="795" height="847" key="dock-window-4" timestamp="1606119742494">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="-7" y="0" width="795" height="847" key="dock-window-4/0.0.1600.860@0.0.1600.860" timestamp="1606119742494" />
     <state x="856" y="199" key="run.anything.popup" timestamp="1606079492294">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
