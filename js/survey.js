@@ -64,24 +64,29 @@ function ontoQuestionThree(){
 
     $('#surveyOptions').html('<div class="col">\n' +
                                     '<input type="image" src="img/a1.png" alt="Submit" width="170" height="170" onclick="pickedA1()"> <br>\n' +
-        '                            A world with very rapid economic growth and introduction of new technologies, ' +
-        '                               population peaking mid-century. An emphasis on convergence among ' +
-        '                               regions and increased interactions\n' +
+        '                            <b>Convergence among regions and increased interactions</b><br>' +
+        ' <br>' +
+        ' <br>' +
+        '                            <b>An economy based on rapid growing technological advancement</b>\n' +
         '                        </div>\n' +
         '                        <div class="col">\n' +
                                     '<input type="image" src="img/b1.png" alt="Submit" width="200" height="170" onclick="pickedB1()"> <br>\n' +
-        '                            A convergent world with population peaking mid-century where the economy shifts into service and information. ' +
-                                    ' a shift towards global solutions for sustainability\n' +
+        '                            <b>Convergence among regions and increased interactions</b><br> ' +
+        ' <br>' +
+        ' <br>' +
+                                    '<b>An economy shifting into service, information and sustainability</b>\n' +
         '                        </div>\n' +
         '                        <div class="col">\n' +
                                     '<input type="image" src="img/a2.png" alt="Submit" width="170" height="170" onclick="pickedA2()"> <br>\n' +
-        '                            A heterogeneous world focused on self-reliance and local identities. Continuously increasing population, ' +
-                                      'Economic development is region based with fragmented technological advancement<br>\n' +
+        '                            <b>Fragmented regions that emphasize on self-reliance and local identities</b><br>' +
+        ' <br>' +
+                                    '<b>An economy based on rapid growing technological advancement</b><br>\n' +
         '                        </div>\n' +
         '                        <div class="col">\n' +
         '                            <input type="image" src="img/b2.png" alt="Submit" width="200" height="170" onclick="pickedB2()"> <br>\n' +
-        '                            A world where the emphasis is on local solutions to economic, social, and environmental sustainability. ' +
-                                    ' Continuously increasing population and less rapid technological and economic change <br>\n' +
+        '                            <b>Fragmented regions that emphasize on self-reliance and local identities</b><br>' +
+        ' <br>' +
+                                    '<b>An economy shifting into service, information and sustainabilit</b><br>\n' +
         '                        </div>\n');
 }
 
