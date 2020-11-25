@@ -24,6 +24,7 @@ function main(data){
     map = new WorldMap("MapSite",data[0],data[2])
     stackedAreaChart = new StackedAreaChart('stackedAreaChart', data[3])
     scatterAnimation = new LineAnimation('lineAnimation', data[1])
+    BubbleMap = new Bubblemap('bubbleMap', data[4])
 
 }
 
