@@ -243,6 +243,27 @@
                         </div>
                     </div>
 
+                    <div id="chart-area" >
+                        <form class="form-inline">
+                            <div class="form-group" >
+                                <label for="data-type"> <b>Energy Source:</b> </label>
+                                <select class="form-control" id="data-type" >
+                                    <option value="coal_consumption_EJ">Coal Consumption (EJ)</option>
+                                    <option value="gas_consumption_EJ">Gas Consumption (EJ)</option>
+                                    <option value="oil_consumption_EJ">Oil Consumption (EJ)</option>
+                                    <option value="solar_generation_TWh">Solar Generation (TWh)</option>
+                                    <option value="wind_generation_TWh">Wind Generation (TWh)</option>
+                                    <option value="hydro_generation_TWh">Hydro Generation (TWh)</option>
+                                    <option value="geo_biomass_other_TWh">Geo Biomass (TWh)</option>
+                                    <option value="nuclear_generation_TWh">Nuclear Generation (TWh)</option>
+
+                                </select>
+                                <label for="year"> <b> Year (any between 1965-2019) </b> </label>
+                                <input type="text" class="form-control" id="year" value="2019" size="10px">
+                                <button type="button" id="submit_" class = "btn btn-primary" onclick="updateVisualization()">Submit</button>
+                            </div>
+                        </form>
+
                     <div class="row">
                         <div class="col" id="bubbleMap"></div>
                     </div>
@@ -292,6 +313,9 @@
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     <script src="https://d3js.org/topojson.v2.min.js"></script>
     <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+
+    <!-- function for radial charts -->
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
 
     <!-- Leaflet -->
     <script src="js/leaflet.js"></script>
