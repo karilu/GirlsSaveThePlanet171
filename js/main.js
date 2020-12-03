@@ -4,14 +4,13 @@ let stackedAreaChart;
 let worldData;
 let investmentData;
 let scatterAnimation;
-let bubbleMap
+
 
 let promises = [
     d3.json("data/world.geo.json"),
     d3.csv("data/fossilfuelEmissions.csv"),
     d3.csv("data/crops.csv"),
     d3.csv("data/renewableInvestment.csv"),
-    d3.csv("data/EnergyConsumptionBySource.csv")
 ];
 
 Promise.all(promises)
@@ -24,7 +23,6 @@ function main(data){
     map = new WorldMap("MapSite",data[0],data[2])
     stackedAreaChart = new StackedAreaChart('stackedAreaChart', data[3])
     scatterAnimation = new LineAnimation('lineAnimation', data[1])
-    BubbleMap = new Bubblemap('bubbleMap', data[4])
 
 }
 
