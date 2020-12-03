@@ -5,7 +5,7 @@ class StackedAreaChart {
         this.data = data
         this.displayData = [];
 
-        let colors = ['#AA4839', '#AA7239', '#265B6A', '#2A7E43', '#582B73', '#882D63', '#7EA136', '#ACAB39']
+        let colors = ['#8dd3c7', '#ffffb3', '#bebada', '#fb8072', '#80b1d3', '#fdb462','#b3de69', '#fccde5']
 
         this.dataCategories = Object.keys(this.data[0]).filter(d => d !== "Year")
 
