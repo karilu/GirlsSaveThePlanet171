@@ -89,12 +89,13 @@ function updateVisualization() {
     x.domain(filteredData.map(function(d) {return d.country;}));
     y.domain([0, d3.max(filteredData, d =>d[selectValue])]);
 
-    let bubbleGraph = svg.append("g")
-        .selectAll("path")
+    let bubbleGraph = svg.selectAll(".path")
         .data(filteredData)
 
         bubbleGraph.enter()
         .append("path")
+            .attr("class", "path")
+        .merge(bubbleGraph)
         .attr("fill", "#69b3a2")
         .attr("d", d3.arc()     // imagine your doing a part of a donut plot
             .innerRadius(innerRadius)
@@ -104,12 +105,13 @@ function updateVisualization() {
             .padAngle(0.01)
             .padRadius(innerRadius))
 
-    let bubbleText = svg.append("g")
-        .selectAll("g")
+    let bubbleText = svg.selectAll(".label")
         .data(filteredData)
 
         bubbleText.enter()
         .append("g")
+            .attr("class", "label")
+        .merge(bubbleText)
         .attr("text-anchor", function(d) { return (x(d.country) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "end" : "start"; })
         .attr("transform", function(d) { return "rotate(" + ((x(d.country) + x.bandwidth() / 2) * 180 / Math.PI - 90) + ")"+"translate(" + (y(d[selectValue])+10) + ",0)"; })
         .append("text")
@@ -117,6 +119,7 @@ function updateVisualization() {
         .attr("transform", function(d) { return (x(d.country) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(180)" : "rotate(0)"; })
         .style("font-size", "11px")
         .attr("alignment-baseline", "middle")
+        
 // NEED TO FIGURE OUT HOW TO MAKE THIS WORK
     bubbleGraph.exit().remove();
     bubbleText.exit().remove();
