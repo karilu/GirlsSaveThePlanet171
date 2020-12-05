@@ -16,13 +16,16 @@ class LineAnimation {
 
         vis.margin = {top: 40, right: 40, bottom: 60, left: 80};
         //the dynamic sizing wasn't working so I hard coded it in the meantime
-        vis.width = 400 - vis.margin.left - vis.margin.right;
+        vis.width = 450 - vis.margin.left - vis.margin.right;
         vis.height = 400 - vis.margin.top - vis.margin.bottom;
 
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr("width", vis.width + vis.margin.left + vis.margin.right)
             .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
-            .append("g").attr('id',"lineaninationg")
+            .append("g")
+            .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
+
+        vis.circle = vis.svg.append("g")
             .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
         vis.x = d3.scaleLinear()
@@ -90,16 +93,20 @@ class LineAnimation {
     updatevis(){
         let vis = this;
 
+        console.log(vis.displayData)
+        console.log(vis.currentX)
+        console.log(vis.currentY)
+
         vis.ymin = d3.min(vis.displayData, d=>d.instances[0][vis.currentY]);
         vis.ymax = d3.max(vis.displayData, d=>d.instances[0][vis.currentY]);
 
         vis.xmin = d3.min(vis.displayData, d=>d.instances[0][vis.currentX]);
         vis.xmax = d3.max(vis.displayData, d=>d.instances[0][vis.currentX]);
 
-        vis.y.domain([vis.ymin/2,vis.ymax]);
-        vis.x.domain([vis.xmin/2,vis.xmax + vis.xmax/5]);
+        vis.y.domain([vis.ymin - 1,vis.ymax + 5]);
+        vis.x.domain([vis.xmin - 1,vis.xmax + 5]);
 
-        let circles = vis.svg.selectAll("circle")
+        let circles = vis.circle.selectAll("circle")
             .data(vis.displayData)
 
         circles.enter()
@@ -124,7 +131,7 @@ class LineAnimation {
 
         vis.currentX = changed
 
-        vis.updatevis()
+        vis.wrangledata()
     }
 
     changedY(changed){
@@ -132,7 +139,7 @@ class LineAnimation {
 
         vis.currentY = changed
 
-        vis.updatevis()
+        vis.wrangledata()
     }
 
     changedYear(changed){
