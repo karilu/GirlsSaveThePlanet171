@@ -81,7 +81,7 @@
                             <div class="row" >
                                 <div class="col">
                                     <h1> Figure 1. World Map </h1>
-                                    <h5> This visualization shows projections of world staple crop yield changes from the 2000 standard for different climate change scenarios.</h5>
+                                    <h5> This visualization shows projections of world staple crop yield percent changes from the 2000 standard for different climate change scenarios.</h5>
                                         <p><i>Source: Ana Iglesias of The Universidad Politecnica de Madrid and Cynthia Rosenzweig
                                             of the NASA Goddard Institute for Space Studies (2010).</i></p>
                                 </div>
@@ -94,15 +94,19 @@
                                 </div>
 
                                 <div class="col">
-                                    <p id="surveyResults"> <b> You did not complete the survey so please read the filter descriptions in order to
-                                        create different maps to explore. Click on the countries for more information. </b></p>
-                                    <i>The dark gray color indicates information is not available</i><br><br>
+                                    <p id="surveyResults"> <b> You did not complete the survey so please read the filter descriptions by hovering over their labels in order to
+                                        create different maps to explore. Hover on the countries for more information. </b></p>
+                                    <i>The dark gray color indicates information is not available for that country</i><br><br>
                                     <h4> Control The Map </h4><br>
-                                    <label for="V1year"><b>Year:</b></label><select name="V1year" id="V1year" onchange="map.updatevis()">
+                                    <label data-toggle="tooltip" data-placement="top" title="The year that the projection will focus on" for="V1year"><b>Year:  </b></label>
+                                    <select name="V1year" id="V1year" onchange="map.updatevis()">
                                         <option value="2050"> 2050 </option>
                                         <option value="2080"> 2080 </option>
                                     </select> <br>
-                                    <label for="V1projection"><b> Global Projection: </b></label><select name="V1projection" id="V1projection"
+                                    <label data-toggle="tooltip" data-placement="left" title="These projections come from the Special Report on Emissions Scenarios by
+                                    the Intergovernmental Panel on Climate Change. In relation to question 3 on the previous survey, A1 scenarios are tied to option 1,
+                                    B1 scenarios with option 2, A2 scenarios to option 3, and B2 scenarios to option 4."
+                                           for="V1projection"><b> Global Projection: </b></label><select name="V1projection" id="V1projection"
                                                                                                          onchange="map.updatevis()">
                                         <option value="A1F1"> SRES A1F1 </option>
                                         <option value="A2a"> SRES A2a </option>
@@ -112,7 +116,8 @@
                                         <option value="B2a"> SRES B2a </option>
                                         <option value="B2b"> SRES B2b </option>
                                     </select> <br>
-                                    <label for="V1crop"><b> Crop: </b></label><select name="V1crop" id="V1crop" onchange="map.updatevis()">
+                                    <label data-toggle="tooltip" data-placement="bottom" title="The crop that the projection will focus on" for="V1crop"><b> Crop: </b></label>
+                                    <select name="V1crop" id="V1crop" onchange="map.updatevis()">
                                         <option value="0"> Wheat </option>
                                         <option value="1"> Rice </option>
                                         <option value="2"> Maize </option>
@@ -299,12 +304,13 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
-    </div>
+            </div></div>
 
     <!-- BootStrap-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
@@ -339,4 +345,4 @@
     </script>
 
 </body>
-</html
+</html>

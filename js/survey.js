@@ -60,33 +60,23 @@ function ontoQuestionTwo(){
 }
 
 function ontoQuestionThree(){
-    $("#surveyQuestion").html('<b> Which of the following scenarios do you consider the most likely?</b>');
+    $("#surveyQuestion").html('<b> Which of the following scenarios of future global developments do you consider the most likely?</b>');
 
     $('#surveyOptions').html('<div class="col">\n' +
                                     '<input type="image" src="img/a1.png" alt="Submit" width="170" height="170" onclick="pickedA1()"> <br>\n' +
-        '                            <b>Convergence among regions and increased interactions</b><br>' +
-        ' <br>' +
-        ' <br>' +
-        '                            <b>An economy based on rapid growing technological advancement</b>\n' +
+        '                            Convergence among regions and increased interactions with an economy based on rapid growing technological advancement' +
         '                        </div>\n' +
         '                        <div class="col">\n' +
                                     '<input type="image" src="img/b1.png" alt="Submit" width="200" height="170" onclick="pickedB1()"> <br>\n' +
-        '                            <b>Convergence among regions and increased interactions</b><br> ' +
-        ' <br>' +
-        ' <br>' +
-                                    '<b>An economy shifting into service, information and sustainability</b>\n' +
+        '                            Convergence among regions and increased interactions with an economy shifting into service, information and sustainability' +
         '                        </div>\n' +
         '                        <div class="col">\n' +
                                     '<input type="image" src="img/a2.png" alt="Submit" width="170" height="170" onclick="pickedA2()"> <br>\n' +
-        '                            <b>Fragmented regions that emphasize on self-reliance and local identities</b><br>' +
-        ' <br>' +
-                                    '<b>An economy based on rapid growing technological advancement</b><br>\n' +
+        '                            Fragmented regions that emphasize on self-reliance and local identities with an economy based on rapid growing technological advancement' +
         '                        </div>\n' +
         '                        <div class="col">\n' +
         '                            <input type="image" src="img/b2.png" alt="Submit" width="200" height="170" onclick="pickedB2()"> <br>\n' +
-        '                            <b>Fragmented regions that emphasize on self-reliance and local identities</b><br>' +
-        ' <br>' +
-                                    '<b>An economy shifting into service, information and sustainabilit</b><br>\n' +
+        '                            Fragmented regions that emphasize on self-reliance and local identities with an economy shifting into service, information and sustainability' +
         '                        </div>\n');
 }
 

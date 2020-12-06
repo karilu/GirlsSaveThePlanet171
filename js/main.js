@@ -5,6 +5,9 @@ let worldData;
 let investmentData;
 let scatterAnimation;
 
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+});
 
 let promises = [
     d3.json("data/world.geo.json"),

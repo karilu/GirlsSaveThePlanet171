@@ -34,8 +34,9 @@ class WorldMap {
                 d > 5  ? '#e9a3c9' :
                     d > 0   ? '#fde0ef' :
                         d > -5  ? '#e6f5d0' :
-                            d > -10   ? '#a1d76a' :
-                                d > -15   ? '#4d9221' :
+                            d > -15   ? '#a1d76a' :
+                                d > -25   ? '#4d9221' :
+                                    d > -35   ? '#254810' :
                                     '#777572';
         };
 
@@ -44,14 +45,14 @@ class WorldMap {
         vis.legend.onAdd = function (map) {
 
             let div = L.DomUtil.create('div', 'info legend'),
-                grades = [-15, -10, -5, 0, 5, 10],
+                grades = [-35, -25, -15, -5, 0, 5, 10],
                 labels = [];
 
             // loop through our density intervals and generate a label with a colored square for each interval
             for (let i = 0; i < grades.length; i++) {
                 div.innerHTML +=
                     '<i style="background:' + vis.color(grades[i] + 1) + '"></i> ' +
-                    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+                    grades[i] + (grades[i + 1] ? ' &ndash; ' + grades[i + 1] + '<br>' : '+');
             }
 
             return div;
