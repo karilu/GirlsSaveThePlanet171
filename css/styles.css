@@ -33,3 +33,7 @@ h5 {
     height: 400px;
 
 }
+
+button:focus {
+    background-color: green;
+}

@@ -154,29 +154,49 @@
                             <div class="row" >
                                 <div class="col">
                                     <h1> Figure 2. Fossil Fuel Emissions </h1>
-                                    <h5> Visualization Explanation</h5>
+                                    <h5>  As we can see from this graph, global fossil fuel emissions increase drastically since the 1900s. You can select specific countries to see their
+                                        fossil fuel emission trend. Above all, China and India have become the most significant fossil fuel emitters in the past decades.
+                                    </h5>
                                 </div>
-                            </div> <br>
+                            </div>
 
                             <div class="row">
                                 <div class="col">
-                                    <div>
-                                        <b> This is the area for our second visualization main line chart </b>
+                                    <div id = 'lineAnimation'>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <b>The values for the following visualization have been randomly generated.
+                                            Feel free to change the x and y axises with the buttons below and tne
+                                            year through the below linechart.</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <b>x-axis</b><br><br>
+                                            <button id="xtotal" onclick="scatterPlot.changedX('Total')">Total</button>
+                                            <button id="xsolid" onclick="scatterPlot.changedX('Solid Fuel')">Solid Fuel</button><br>
+                                            <button id="xliquid" onclick="scatterPlot.changedX('Liquid Fuel')">Liquid Fuel</button>
+                                            <button id="xgas" onclick="scatterPlot.changedX('Gas Fuel')">Gas Fuel</button><br>
+                                            <button id="xcement" onclick="scatterPlot.changedX('Cement')">Cement</button><br>
+                                        </div>
+                                        <div class="col">
+                                            <b>y-axis</b><br><br>
+                                            <button id="ytotal" onclick="scatterPlot.changedY('Total')">Total</button>
+                                            <button id="ysolid" onclick="scatterPlot.changedY('Solid Fuel')">Solid Fuel</button><br>
+                                            <button id="yliquid" onclick="scatterPlot.changedY('Liquid Fuel')">Liquid Fuel</button>
+                                            <button id="ygas" onclick="scatterPlot.changedY('Gas Fuel')">Gas Fuel</button><br>
+                                            <button id="ycement" onclick="scatterPlot.changedY('Cement')">Cement</button><br>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row" >
-                                <div class="col" id="linechartinyourarea">
-                                    <b> This graph will be linked and control the above visualization</b>
-                                    <p> As we can see from this graph, global fossil fuel emissions increase drastically since the 1900s. You can select specific countries to see their
-                                        fossil fuel emission trend. Above all, China and India have become the most significant fossil fuel emitters in the past decades.
-                                    </p>
-                                </div>
-                            </div>
-
                             <div class="row">
-                                <div class="col" id="lineAnimation">
+                                <div class="col">
+                                    <div id="linechartinyourarea"></div>
                                 </div>
                             </div>
 
@@ -191,7 +211,7 @@
                         <div class="col">
                             <h1>Going Green</h1>
                             <p> As shown in figure 1 and 2, global warming impacts worldwide crop production, and fossil fuel emission is one of the
-                                most significant culprit. Since the 2000s, the world has ramped up investments in clean energy (biomass, geothermal, hydropower, solar, and wind).
+                                most significant culprits. Since the 2000s, the world has ramped up investments in clean energy (biomass, geothermal, hydropower, solar, and wind).
                                 For specific investment trend in different regions, please scroll down to see the visualization below. </p>
                         </div>
                     </div>
@@ -269,10 +289,11 @@
                             </div>
                         </form>
 
-                    <div class="row">
-                        <div class="col" id="bubbleMap"></div>
-                    </div>
+                        <div class="row">
+                            <div class="col" id="bubbleMap"></div>
+                        </div>
 
+                    </div>
                 </div>
             </div>
 
@@ -304,10 +325,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
-            </div></div>
+        </div>
+    </div>
 
     <!-- BootStrap-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

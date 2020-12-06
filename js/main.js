@@ -3,7 +3,9 @@ let map;
 let stackedAreaChart;
 let worldData;
 let investmentData;
-let scatterAnimation;
+let scatterPlot;
+
+let MyEventHandler = {};
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -22,10 +24,14 @@ Promise.all(promises)
 
 function main(data){
     console.log(data)
-    lineChart = new LineChart("linechartinyourarea",data[1])
+    lineChart = new LineChart("linechartinyourarea",data[1], MyEventHandler)
     map = new WorldMap("MapSite",data[0],data[2])
     stackedAreaChart = new StackedAreaChart('stackedAreaChart', data[3])
-    scatterAnimation = new LineAnimation('lineAnimation', data[1])
+    scatterPlot = new LineAnimation('lineAnimation', data[1])
 
 }
+
+$(MyEventHandler).bind("selectionChanged", function(event, year){
+    scatterPlot.changedYear(year);
+});
 
