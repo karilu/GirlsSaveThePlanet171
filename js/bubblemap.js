@@ -46,16 +46,15 @@ function loadData() {
         // Store csv data in global variable
         data = csv;
         console.log(data);
-
+            
+        // define x scale 
         x = d3.scaleBand()
             .range([0, 2 * Math.PI])
             .align(0)
 
-
+        // define y scale
         y = d3.scaleRadial()
             .range([innerRadius, outerRadius])
-
-        
 
         // Draw the visualization for the first time
         updateVisualization();
@@ -64,7 +63,7 @@ function loadData() {
 
 
 function updateVisualization() {
-
+    // define select value as what's chosen
     selectValue = d3.select("#data-type").property("value");
     console.log(selectValue);
 
@@ -88,20 +87,22 @@ function updateVisualization() {
     // update scales
     x.domain(filteredData.map(function(d) {return d.country;}));
     y.domain([0, d3.max(filteredData, d =>d[selectValue])]);
-
+        
+    // define bubblegraph 
     let bubbleGraph = svg.selectAll(".path")
         .data(filteredData)
 
         bubbleGraph.enter()
         .append("path")
             .attr("class", "path")
+        // need to add merge to make exit and remove work
         .merge(bubbleGraph)
         .attr("fill", "#69b3a2")
         .attr("d", d3.arc()     // imagine your doing a part of a donut plot
             .innerRadius(innerRadius)
             .outerRadius(function(d) { return y(d[selectValue]); })
             .startAngle(function(d) { return x(d.country); })
-            .endAngle(function(d) { return x(d.country) + x.bandwidth(); })
+            .endAngle(function(d) { return x(d.country) + x.bandwidth(); }) // make sure every country takes the same angle
             .padAngle(0.01)
             .padRadius(innerRadius))
 
@@ -112,6 +113,7 @@ function updateVisualization() {
         .append("g")
             .attr("class", "label")
         .merge(bubbleText)
+        // anchor the texts right outside of their slices
         .attr("text-anchor", function(d) { return (x(d.country) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "end" : "start"; })
         .attr("transform", function(d) { return "rotate(" + ((x(d.country) + x.bandwidth() / 2) * 180 / Math.PI - 90) + ")"+"translate(" + (y(d[selectValue])+10) + ",0)"; })
         .append("text")
@@ -120,7 +122,7 @@ function updateVisualization() {
         .style("font-size", "11px")
         .attr("alignment-baseline", "middle")
         
-// NEED TO FIGURE OUT HOW TO MAKE THIS WORK
+// change graph everytime when new selections are made
     bubbleGraph.exit().remove();
     bubbleText.exit().remove();
 
