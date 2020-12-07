@@ -14,7 +14,7 @@ class LineChart {
 
         vis.margin = {top: 30, right: 40, bottom: 60, left: 80};
         vis.width = $('#' + vis.parentElement).width() - vis.margin.left - vis.margin.right;
-        vis.height = 275 - vis.margin.top - vis.margin.bottom;
+        vis.height = 220 - vis.margin.top - vis.margin.bottom;
 
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr("width", vis.width + vis.margin.left + vis.margin.right)
@@ -59,15 +59,11 @@ class LineChart {
             vis.final.push([d[0].Year, b])
         })
 
-        console.log(vis.final)
-
         this.updatevis()
     }
 
     updatevis(){
         let vis = this
-
-        let parseTime = d3.timeParse("%Y-%m-%d");
 
         vis.ymin = d3.min(vis.final, d=>d[1]);
         vis.ymax = d3.max(vis.final, d=>d[1]);
@@ -89,8 +85,6 @@ class LineChart {
         vis.tooltip.append("line").attr("x1",0).attr("y1",0).attr("x2",0).attr("y2",vis.height)
             .attr("stroke","red");
         vis.tooltip.append("text").text("").attr("x",10).attr("y", 20).attr("id","tooltipDate").attr("fill","red");
-
-       let bisect = d3.bisector(d => d.year).right;
 
         //tooltip update function
         function mousemove(event){

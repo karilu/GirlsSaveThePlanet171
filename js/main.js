@@ -2,8 +2,8 @@ let lineChart;
 let map;
 let stackedAreaChart;
 let worldData;
-let investmentData;
 let scatterPlot;
+let rayChart;
 
 let MyEventHandler = {};
 
@@ -16,6 +16,7 @@ let promises = [
     d3.csv("data/fossilfuelEmissions.csv"),
     d3.csv("data/crops.csv"),
     d3.csv("data/renewableInvestment.csv"),
+    d3.csv("data/energyconsumption.csv")
 ];
 
 Promise.all(promises)
@@ -28,7 +29,7 @@ function main(data){
     map = new WorldMap("MapSite",data[0],data[2])
     stackedAreaChart = new StackedAreaChart('stackedAreaChart', data[3])
     scatterPlot = new LineAnimation('lineAnimation', data[1])
-
+    rayChart = new RayChart('rayChart',data[4]);
 }
 
 $(MyEventHandler).bind("selectionChanged", function(event, year){

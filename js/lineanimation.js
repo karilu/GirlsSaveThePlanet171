@@ -14,9 +14,10 @@ class LineAnimation {
     initvis(){
         let vis = this;
 
+        //creating the svg area
         vis.margin = {top: 30, right: 30, bottom: 40, left: 70};
-        vis.width = 500 - vis.margin.left - vis.margin.right;
-        vis.height = 400 - vis.margin.top - vis.margin.bottom;
+        vis.width = 450 - vis.margin.left - vis.margin.right;
+        vis.height = 300 - vis.margin.top - vis.margin.bottom;
 
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr("width", vis.width + vis.margin.left + vis.margin.right)
@@ -24,9 +25,9 @@ class LineAnimation {
             .append("g")
             .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
+        //scales for the axis
         vis.x = d3.scaleLinear()
-            .range([0,vis.width])
-
+            .range([vis.margin.right,vis.width])
         vis.y = d3.scaleLinear()
             .range([vis.height, 0]);
 
@@ -41,16 +42,18 @@ class LineAnimation {
 
         vis.listofContent = ['Total','Solid Fuel','Liquid Fuel','Gas Fuel','Cement']
 
+        vis.listofColors=['#4509DE','#66F3FA','#F58773','#DB0365','#9DACFF']
+
         vis.currentYear = vis.listofYears[Math.floor(Math.random() * vis.listofYears.length)];
         vis.currentX = vis.listofContent[Math.floor(Math.random() * vis.listofContent.length)];
-        vis.currentY= vis.listofContent[Math.floor(Math.random() * vis.listofContent.length)];;
-
-        vis.yAxisGroup = vis.svg.append("g").attr("class", "y-axis axis");
-        vis.xAxisGroup = vis.svg.append("g").attr("class", "x-axis axis");
+        vis.currentY= vis.listofContent[Math.floor(Math.random() * vis.listofContent.length)];
 
         vis.tooltip = d3.select("#" + vis.parentElement).append("div")
             .attr("class", "tooltip")
             .style("opacity", 0);
+
+        vis.yAxisGroup = vis.svg.append("g").attr("class", "y-axis axis");
+        vis.xAxisGroup = vis.svg.append("g").attr("class", "x-axis axis");
 
         vis.svg.append("text")
             .attr("id", "y-axis-title")
@@ -59,7 +62,6 @@ class LineAnimation {
             .attr("dy", ".1em")
             .style("text-anchor", "end")
             .text(vis.currentY);
-
         vis.svg.append("text")
             .attr("id", "x-axis-title")
             .attr("x", vis.width/2 + 50)
@@ -67,9 +69,6 @@ class LineAnimation {
             .attr("dy", ".1em")
             .style("text-anchor", "end")
             .text(vis.currentX);
-
-        console.log("CURRENT YEAR")
-        console.log(vis.currentYear)
 
         vis.wrangledata()
     }
@@ -81,8 +80,6 @@ class LineAnimation {
         vis.displayData = [];
 
         vis.yearRevelantData = vis.data.filter(a =>  a.Year === vis.currentYear)
-
-        console.log(vis.yearRevelantData)
 
         vis.yearRevelantData.forEach(d => {
             let country = d.Country;
@@ -96,13 +93,11 @@ class LineAnimation {
             let instances = vis.yearRevelantData.filter(a =>  a.Country === d)
             let country = {
                 name: d,
-                instances: instances
+                instances: instances,
+                color: vis.listofColors[Math.floor(Math.random() * vis.listofColors.length)]
             }
             vis.displayData.push(country)
         })
-
-        console.log(vis.displayData)
-
 
         vis.updatevis()
     }
@@ -113,18 +108,16 @@ class LineAnimation {
         vis.svg.select("#y-axis-title").remove();
         vis.svg.select("#x-axis-title").remove();
 
-        console.log(vis.displayData)
-        console.log(vis.currentX)
-        console.log(vis.currentY)
-
         vis.ymin = d3.min(vis.displayData, d=>d.instances[0][vis.currentY]);
         vis.ymax = d3.max(vis.displayData, d=>d.instances[0][vis.currentY]);
 
         vis.xmin = d3.min(vis.displayData, d=>d.instances[0][vis.currentX]);
         vis.xmax = d3.max(vis.displayData, d=>d.instances[0][vis.currentX]);
 
-        vis.y.domain([vis.ymin,vis.ymax]);
-        vis.x.domain([vis.xmin,vis.xmax]);
+        vis.y.domain([vis.ymin * .75,vis.ymax * 1.25]);
+        vis.x.domain([vis.xmin *75 ,vis.xmax * 1.25]);
+
+        console.log(vis.ymax)
 
         let tipMouseover = function(d,event) {
             let html  = '<b>'+ d.name + ' ' + vis.currentYear + '</b>' + "<br/>" +
@@ -152,7 +145,7 @@ class LineAnimation {
             .append("circle")
             .merge(circles)
             .attr("r", 5)
-            .style("fill", "#69b3a2")
+            .style("fill", d => d.color)
             .on("mouseover", (event,d) => {tipMouseover(d,event)})
             .on("mouseout", tipMouseout)
             .transition(800)
@@ -204,8 +197,6 @@ class LineAnimation {
         let vis = this;
 
         vis.currentYear = changed.toString()
-
-        console.log(vis.currentYear)
 
         vis.wrangledata()
     }

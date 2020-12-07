@@ -24,7 +24,6 @@ class StackedAreaChart {
         let vis = this
 
         vis.margin = {top: 40, right: 40, bottom: 60, left: 60};
-        //the dynamic sizing wasn't working so I hard coded it in the meantime
         vis.width = 600 - vis.margin.left - vis.margin.right;
         vis.height = 500 - vis.margin.top - vis.margin.bottom;
 
@@ -65,7 +64,6 @@ class StackedAreaChart {
 
         // stack layout
         vis.stackedData = d3.stack().keys(vis.dataCategories)(vis.data);
-        console.log("stacked", vis.stackedData)
 
         //stacked area layout
         vis.area = d3.area()
@@ -95,7 +93,6 @@ class StackedAreaChart {
 
         if (vis.focus) {
 
-            console.log("Applying filter " + vis.filter + " at " + vis.filter);
             vis.displayData = [vis.stackedData[vis.selectedIndex]];
         } else {
             vis.displayData = vis.stackedData;

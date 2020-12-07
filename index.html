@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <div class="section" id="introSection">
+            <div class="section words" id="introSection">
                 <div class="container">
                     <div class="row">
                         <div class="col">
@@ -85,7 +85,7 @@
                                         <p><i>Source: Ana Iglesias of The Universidad Politecnica de Madrid and Cynthia Rosenzweig
                                             of the NASA Goddard Institute for Space Studies (2010).</i></p>
                                 </div>
-                            </div> <br>
+                            </div>
 
                             <div class="row">
 
@@ -95,7 +95,7 @@
 
                                 <div class="col">
                                     <p id="surveyResults"> <b> You did not complete the survey so please read the filter descriptions by hovering over their labels in order to
-                                        create different maps to explore. Hover on the countries for more information. </b></p>
+                                        create different maps to explore. </b></p>
                                     <i>The dark gray color indicates information is not available for that country</i><br><br>
                                     <h4> Control The Map </h4><br>
                                     <label data-toggle="tooltip" data-placement="top" title="The year that the projection will focus on" for="V1year"><b>Year:  </b></label>
@@ -130,7 +130,7 @@
                 </div>
             </div>
 
-            <div class="section" id="VisTwoText">
+            <div class="section words" id="VisTwoText">
                 <div class="container">
                     <div class="row">
                         <div class="col">
@@ -154,9 +154,9 @@
                             <div class="row" >
                                 <div class="col">
                                     <h1> Figure 2. Fossil Fuel Emissions </h1>
-                                    <h5>  As we can see from this graph, global fossil fuel emissions increase drastically since the 1900s. You can select specific countries to see their
-                                        fossil fuel emission trend. Above all, China and India have become the most significant fossil fuel emitters in the past decades.
-                                    </h5>
+                                    <h5>  The following interconnected graphs will allow you to see how global carbon emissions have changed over time.
+                                        The initial values have been randomly generated.
+                                    </h5><br>
                                 </div>
                             </div>
 
@@ -168,14 +168,17 @@
                                 <div class="col">
                                     <div class="row">
                                         <div class="col">
-                                            <b>The values for the following visualization have been randomly generated.
-                                            Feel free to change the x and y axises with the buttons below and tne
-                                            year through the below linechart.</b>
+                                            <b>Each dot in this scatterplot represents a different country. The colors are only for differentiation
+                                                . The location of the dot
+                                                on the graph represents the relationship of two different types of carbon emissions.
+                                            Explore it by changing the values of the x or y axes with the buttons below
+                                                and drag the slider in the linegraph to change the focus year. Hovering over each dot
+                                            will also display the information directly.</b><br>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col">
-                                            <b>x-axis</b><br><br>
+                                            <b>x-axis</b><br>
                                             <button id="xtotal" onclick="scatterPlot.changedX('Total')">Total</button>
                                             <button id="xsolid" onclick="scatterPlot.changedX('Solid Fuel')">Solid Fuel</button><br>
                                             <button id="xliquid" onclick="scatterPlot.changedX('Liquid Fuel')">Liquid Fuel</button>
@@ -183,7 +186,7 @@
                                             <button id="xcement" onclick="scatterPlot.changedX('Cement')">Cement</button><br>
                                         </div>
                                         <div class="col">
-                                            <b>y-axis</b><br><br>
+                                            <b>y-axis</b><br>
                                             <button id="ytotal" onclick="scatterPlot.changedY('Total')">Total</button>
                                             <button id="ysolid" onclick="scatterPlot.changedY('Solid Fuel')">Solid Fuel</button><br>
                                             <button id="yliquid" onclick="scatterPlot.changedY('Liquid Fuel')">Liquid Fuel</button>
@@ -205,13 +208,15 @@
                 </div>
             </div>
 
-            <div class="section" id="VisThreeText">
+            <div class="section words" id="VisThreeText">
                 <div class="container">
                     <div class="row">
                         <div class="col">
                             <h1>Going Green</h1>
-                            <p> As shown in figure 1 and 2, global warming impacts worldwide crop production, and fossil fuel emission is one of the
-                                most significant culprits. Since the 2000s, the world has ramped up investments in clean energy (biomass, geothermal, hydropower, solar, and wind).
+                            <p> As shown in Figure 1, global warming impacts worldwide crop production, and fossil fuel emission is one of the
+                                most significant culprits. Figure 2 shows that global fossil fuel emissions have increased drastically since the 1900s.
+                                This paints a harrowing picture, but there is hope yet.
+                                Since the 2000s, the world has ramped up investments in clean energy (biomass, geothermal, hydropower, solar, and wind).
                                 For specific investment trend in different regions, please scroll down to see the visualization below. </p>
                         </div>
                     </div>
@@ -224,25 +229,26 @@
                     <div class="row" >
                         <div class="col">
                             <h1> Figure 3. Stacked Area Chart Illustrating Investment in Clean Energy </h1>
-                            <p> <b>Since 2005, world investment in clean energy has increased almost 5 times.</b>
-                                <b> China </b> became the largest investor in clean energy,investing 83.4 billion USD in 2019. <b> United States</b>
-                                and <b>Europe</b> are the second and third biggest investors. However, the global investment slowed down
-                                in the past four years (2015-2019), floating at around 300 billion USD each year. This fact is concerning, as
-                                growing emissions will not only impact food production, but also raise sea levels and the possibility of extreme
-                                weathers, putting tens and thousands of human lives at risk.
-                            </p>
                         </div>
                     </div> <br>
 
                     <div class="row">
-                        <div class="col" id="stackedAreaChart">
+                        <div class="col d-flex justify-content-center" id="stackedAreaChart">
+                        </div>
+                        <div class="col">
+                            <b>Since 2005, world investment in clean energy has increased almost 5 times.</b>
+                            <b> China </b> became the largest investor in clean energy,investing 83.4 billion USD in 2019. <b> United States</b>
+                            and <b>Europe</b> are the second and third biggest investors. However, the global investment slowed down
+                            in the past four years (2015-2019), floating at around 300 billion USD each year. This fact is concerning, as
+                            growing emissions will not only impact food production, but also raise sea levels and the possibility of extreme
+                            weathers, putting tens and thousands of human lives at risk.
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <div class="section" id="VisFourText">
+            <div class="section words" id="VisFourText">
                 <div class="container">
                     <div class="row">
                         <div class="col">
@@ -263,7 +269,9 @@
                     <div class="row">
                         <div class="col">
                             <div>
-                                <b> Energy Portfolio for Regions</b>
+                                <h1> Figure 4. Energy Portfolio for Regions </h1>
+                                <h5> The below ray map illustrates the global energy portfolio from 1965 to 2019. Each ray represents a country.
+                                Hover over the country for more information and change the display with the below controls.</h5>
                             </div>
                         </div>
                     </div>
@@ -271,8 +279,12 @@
                     <div id="chart-area" >
                         <form class="form-inline">
                             <div class="form-group" >
+                                <div class="slideContainer">
+                                    <label id='selected-year' for="myRange"> Year: <b>2000</b> </label>
+                                    <input type="range" min="1965" max="2019" value="2000" class="slider" id="myRange" onclick="rayChart.wrangleData()">
+                                </div><br>
                                 <label for="data-type"> <b>Energy Source:</b> </label>
-                                <select class="form-control" id="data-type" >
+                                <select class="form-control" id="data-type" onchange="rayChart.wrangleData()" >
                                     <option value="coal_consumption_EJ">Coal Consumption (EJ)</option>
                                     <option value="gas_consumption_EJ">Gas Consumption (EJ)</option>
                                     <option value="oil_consumption_EJ">Oil Consumption (EJ)</option>
@@ -281,29 +293,25 @@
                                     <option value="hydro_generation_TWh">Hydro Generation (TWh)</option>
                                     <option value="geo_biomass_other_TWh">Geo Biomass (TWh)</option>
                                     <option value="nuclear_generation_TWh">Nuclear Generation (TWh)</option>
-
                                 </select>
-                                <label for="year"> <b> Year (any between 1965-2019) </b> </label>
-                                <input type="text" class="form-control" id="year" value="2019" size="10px">
-                                <button type="button" id="submit_" class = "btn btn-primary" onclick="updateVisualization()">Submit</button>
                             </div>
                         </form>
 
                         <div class="row">
-                            <div class="col" id="bubbleMap"></div>
+                            <div class="col d-flex justify-content-center" id="rayChart"></div>
                         </div>
 
                     </div>
                 </div>
             </div>
 
-            <div class="section" id="Conclusion">
+            <div class="section words" id="Conclusion">
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h1> YOU Can Help </h1>
-                            <p> To slow down climate change and save our planet (and your favorite food), we cannot rely solely
-                            on our governments. There are several easy actions each of us could take. <br>
+                            <h1> The Time to Act is Now </h1>
+                            <p> And you can help! To slow down climate change and save our planet (and your favorite food), we cannot rely solely
+                            on our governments. There are several easy actions each of us could take.
                                  The number one thing we could do is to <b>reduce food waste</b>. Surprisingly, reducing food waste has the most substantive impact on reducing
                                 carbon emissions. Meanwhile, eating a <b> plant-rich diet</b> and <b> choosing public transportation or walking</b> to
                                 the destination will also keep our planet cooler. </p>
@@ -312,7 +320,7 @@
                 </div>
             </div>
 
-            <div class="section" id="EndPage">
+            <div class="section words" id="EndPage">
                 <div class="container">
                     <div class="row">
                         <div class="col">
@@ -322,6 +330,7 @@
                             <br> <a href='https://pngtree.com/so/maize-seed'>maize seed png from pngtree.com</a>
                             <br> <a href='https://pngtree.com/so/grain'>grain png from pngtree.com</a>
                                 <a href='https://pngtree.com/so/autumnal'>autumnal png from pngtree.com</a></p>
+                            <a href='https://pngtree.com/so/earth'>earth png from pngtree.com</a>
                         </div>
                     </div>
                 </div>
@@ -351,7 +360,7 @@
 
     <!-- Our implementation -->
     <script src="js/stackedareachart.js"></script>
-    <script src="js/bubblemap.js"></script>
+    <script src="js/raychart.js"></script>
     <script src="js/worldmap.js"></script>
     <script src="js/lineanimation.js"></script>
     <script src="js/linechart.js"></script>
