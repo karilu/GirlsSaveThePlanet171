@@ -77,6 +77,12 @@ class StackedAreaChart {
             .y1(function (d) {
                 return vis.y(d[1]);
             });
+        
+        // Basic area layout
+        vis.basicArea = d3.area()
+            .x(function(d) { return vis.x(d.data.Year); })
+            .y0(vis.height)
+            .y1(function(d) { return vis.y(d[1]-d[0]); });
 
         //add tooltip holder
         vis.tooltip = vis.svg.append("text")
