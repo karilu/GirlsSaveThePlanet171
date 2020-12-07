@@ -1,7 +1,7 @@
 //this is the second visualization and focused on global carbon emissions
 //I wasn't sure what to call it
 
-class LineAnimation {
+class Scatterplot {
 
     constructor(parentElement,data) {
         this.parentElement = parentElement;
@@ -49,7 +49,7 @@ class LineAnimation {
         vis.currentY= vis.listofContent[Math.floor(Math.random() * vis.listofContent.length)];
 
         vis.tooltip = d3.select("#" + vis.parentElement).append("div")
-            .attr("class", "tooltip")
+            .attr("class", "tooltip mine")
             .style("opacity", 0);
 
         vis.yAxisGroup = vis.svg.append("g").attr("class", "y-axis axis");

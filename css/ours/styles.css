@@ -1,5 +1,5 @@
 body{
-    background-image: url("../img/daisy.jpg");
+    background-image: url("../../img/daisy.jpg");
 }
 
 .container{
@@ -78,9 +78,53 @@ button:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.tooltip{
+.tooltip.mine{
     background-color: white;
     padding: 10px;
     border: 1px solid #008CBA;
     border-radius: 4px;
+}
+ #a{
+     background-color: #332288;
+ }
+
+ #b{
+     background-color:#117733;
+ }
+
+ #c{
+     background-color: #44AA99
+ ;
+ }
+#d{
+    background-color:#88CCEE ;
+}
+#e{
+    background-color: #DDCC77;
+}
+
+#f{
+    background-color: #CC6677 ;
+}
+#g{
+    background-color: #AA4499 ;
+}
+
+#h{
+    background-color: #882255 ;
+}
+
+.slideContainer{
+    margin-left: 30px;
+    margin-right: 30px
+}
+
+.legendButtons{
+    border-radius: 50%;
+    padding: 10px;
+    margin: 5px;
+}
+
+#legendlabel{
+    margin-left: 20px;
 }

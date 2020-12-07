@@ -64,7 +64,7 @@ class RayChart {
         console.log(vis.displayData)
 
         vis.tooltip = d3.select("#" + vis.parentElement).append("div")
-            .attr("class", "tooltip")
+            .attr("class", "tooltip mine")
             .style("opacity", 0);
 
         vis.wrangleData()

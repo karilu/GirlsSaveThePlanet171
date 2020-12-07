@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>CS171 Final Project</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/leaflet.css">
-    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/libraries/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="css/libraries/fullpage.css" />
+    <link rel="stylesheet" href="css/ours/styles.css">
 </head>
 <body>
     <div id = "fullpage" >
@@ -14,9 +14,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <img src = "img/background.jpg" alt = "background" width = "1000" height = "800">
                             <h1> Food for thought</h1>
-                           <h5>---Climate change's impact on food production, and what we can do about it.</h5>
+                           <h5>Climate change's impact on food production, and what we can do about it.</h5>
                                Produced by:
                             <p><i>Karina Gonzalez-Espinoza</i><br><i>Victoria Ying</i></p>
                         </div>
@@ -295,6 +294,23 @@
                                     <option value="geo_biomass_other_TWh">Geo Biomass (TWh)</option>
                                     <option value="nuclear_generation_TWh">Nuclear Generation (TWh)</option>
                                 </select>
+                                <label id="legendlabel" for="a"> <b>Legend:</b> </label>
+                                <button id="a" data-toggle="tooltip" data-placement="top" title="Coal Consumption"
+                                        class="legendButtons"></button>
+                                <button id="b" data-toggle="tooltip" data-placement="top" title="Gas Consumption"
+                                        class="legendButtons"></button>
+                                <button id="c" data-toggle="tooltip" data-placement="top" title="Oil Consumption"
+                                        class="legendButtons"></button>
+                                <button id="d" data-toggle="tooltip" data-placement="top" title="Solar Generation"
+                                        class="legendButtons"></button>
+                                <button id="e" data-toggle="tooltip" data-placement="top" title="Wind Generation"
+                                        class="legendButtons"></button>
+                                <button id="f" data-toggle="tooltip" data-placement="top" title="Hydro Generation"
+                                        class="legendButtons"></button>
+                                <button id="g" data-toggle="tooltip" data-placement="top" title="Geo Biomass"
+                                        class="legendButtons"></button>
+                                <button id="h" data-toggle="tooltip" data-placement="top" title="Nuclear Generation"
+                                        class="legendButtons"></button>
                             </div>
                         </form>
 
@@ -333,6 +349,11 @@
                                 <a href='https://pngtree.com/so/autumnal'>autumnal png from pngtree.com</a></p>
                             <a href='https://pngtree.com/so/earth'>earth png from pngtree.com</a>
                         </div>
+                        <div class="col"><br><br>
+                            <a href="https://github.com/karilu/GirlsSaveThePlanet171"> Our github repository</a><br>
+                            <a href="https://docs.google.com/document/d/1_HBFrpurPWXwlk-gAp40DqYhMeO8n2IZ59-S-Ean_IU/edit?usp=sharing"> Our Process Book</a>
+                            <p> Thank you for taking the time to explore our data story!</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -354,19 +375,19 @@
     <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
 
     <!-- Leaflet -->
-    <script src="js/leaflet.js"></script>
+    <script src="js/libraries/leaflet.js"></script>
 
     <!-- Fullpage -->
-    <script type="text/javascript" src="js/fullpage.js"></script>
+    <script type="text/javascript" src="js/libraries/fullpage.js"></script>
 
     <!-- Our implementation -->
-    <script src="js/stackedareachart.js"></script>
-    <script src="js/raychart.js"></script>
-    <script src="js/worldmap.js"></script>
-    <script src="js/lineanimation.js"></script>
-    <script src="js/linechart.js"></script>
-    <script src="js/survey.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/ours/stackedareachart.js"></script>
+    <script src="js/ours/raychart.js"></script>
+    <script src="js/ours/worldmap.js"></script>
+    <script src="js/ours/scatterplot.js"></script>
+    <script src="js/ours/linechart.js"></script>
+    <script src="js/ours/survey.js"></script>
+    <script src="js/ours/main.js"></script>
 
     <!-- Enable fullpage scrolling -->
     <script type="text/javascript">
