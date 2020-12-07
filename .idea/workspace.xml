@@ -13,29 +13,6 @@
     <list default="true" id="e0bda881-2647-4d04-a75b-6deebb6b5ac7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/fullpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/libraries/fullpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/leaflet.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/libraries/leaflet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ours/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/vis1sketch.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/vis2sketch.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/vis4sketch.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bubblemap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/fullpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/libraries/fullpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/leaflet-src.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/libraries/leaflet-src.esm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/leaflet-src.esm.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/js/libraries/leaflet-src.esm.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/leaflet-src.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/libraries/leaflet-src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/leaflet-src.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/js/libraries/leaflet-src.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/leaflet.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/libraries/leaflet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/leaflet.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/js/libraries/leaflet.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/lineanimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ours/scatterplot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/linechart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ours/linechart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ours/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/raychart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ours/raychart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/stackedareachart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ours/stackedareachart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/survey.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ours/survey.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/worldmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ours/worldmap.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +79,7 @@
       <workItem from="1606007017944" duration="41835000" />
       <workItem from="1606122173889" duration="389000" />
       <workItem from="1607203306921" duration="51563000" />
-      <workItem from="1607322669159" duration="364000" />
+      <workItem from="1607322669159" duration="1510000" />
     </task>
     <servers />
   </component>
